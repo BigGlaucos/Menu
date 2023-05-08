@@ -1,3 +1,4 @@
+
 const menu = [
     {
         id:1,
@@ -7,7 +8,7 @@ const menu = [
         img:"./images/item-1.jpeg",
         description:" I'm baby woke milkshake wolf bitters live-edge blue bottle,hammock freegan copper mug whatever cold-pressed",
     },
-
+    
     {
         id:2,
         title:'Diner Double',
@@ -16,7 +17,7 @@ const menu = [
         img:"./images/item-2.jpeg",
         description:"Vaporware iphone mumnlecore selvage raw denim slow-carb leggings gochujang helvetica man braid jianbing.",
     },
-
+    
     {
         id:3,
         title:'Godzilla Milkshake',
@@ -25,7 +26,7 @@ const menu = [
         img:"./images/item-3.jpeg",
         description:"ombucha chillwave fanny pack 3 wolf moon street art photo booth before they sold out organic viral",
     },
-
+    
     {
         id:4,
         title:'Country Delight',
@@ -34,7 +35,7 @@ const menu = [
         img:"./images/item-4.jpeg",
         description:"Shabby chic keffiyeh neutra snackwave pork belly shoreditch.Prism austin mlkshk truffaut.",
     },
-
+    
     {
         id:5,
         title:'Egg Attack',
@@ -43,7 +44,7 @@ const menu = [
         img:"./images/item-5.jpeg",
         description:"Franzen vegan pabst bicycle rights kickstater pinterest meditation farm-to-table 90's pop-up",
     },
-
+    
     {
         id:6,
         title:'Oreo Dream',
@@ -52,7 +53,7 @@ const menu = [
         img:"./images/item-6.jpeg",
         description:"Portland chicharrones ethical edison, palo santo craft beer chia heirloom iphone everyday",
     },
-
+    
     {
         id:7,
         title:'Diner Double',
@@ -61,7 +62,7 @@ const menu = [
         img:"./images/item-7.jpeg",
         description:"Carry jianbing normcore freegan. Viral single-origin coffee live-edge, pork belly cloud bread iceland put a bird",
     },
-
+    
     {
         id:8,
         title:'American Classic',
@@ -70,7 +71,7 @@ const menu = [
         img:"./images/item-8.jpeg",
         description:"Vaporware iphone mumnlecore selvage raw denim slow-carb leggings gochujang helvetica man braid jianbing.",
     },
-
+    
     {
         id:9,
         title:'Diner Double',
@@ -79,7 +80,7 @@ const menu = [
         img:"./images/item-9.jpeg",
         description:"On it tumblr kickstarter thundercast migas everyday carry squid palo santo leggings. Food truck truffaut.",
     },
-
+    
     {
         id:10,
         title:'Stack Dinner',
@@ -88,7 +89,39 @@ const menu = [
         img:"./images/item-10.jpeg",
         description:"Skateboard fam synth authentic semiotics. Live-edge lyft af, edison buld yuccie crucifix microdosing",
     },
+];
+
+const menuItems = document.querySelector('.menu-items');
+const buttonContainer = document.querySelector('.button-contianer');
 
 
 
-]
+
+let displayMenu = menu.map((item) => {
+   let html =  `
+   <div class="menu-items">
+    <div class="item-image">
+      <img src="${item.img}" alt="${item.title}" />
+    </div>
+
+    <div class="item-info">
+      <div class="item-tittle"> 
+        <p>${item.title}</p>
+        <p class="price">$ ${item.price}</p>
+      </div>
+
+      <div class="item-description">
+        <p>
+        ${item.description}
+        </p>
+      </div>
+    </div>
+    `
+    menuItems.innerHTML += html
+} );
+
+
+function filter (category){
+    Element.addEventeListiner("click")
+    
+    }
