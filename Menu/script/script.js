@@ -121,7 +121,22 @@ let displayMenu = menu.map((item) => {
 } );
 
 
-function filter (category){
-    Element.addEventeListiner("click")
-    
-    }
+function displayMenuButtons(){
+    const categories = menu.reduce((value,item) => {
+        if(!value.includes(item.category)){
+            value.push(item.category)
+        }
+        return value;
+    },["all"]);
+
+
+    const categoryButtons= categories.map((category) =>{
+        return`
+        <button class="filter-button" data-id="${category}">${category}</button>
+        `
+    }).join("");
+
+
+
+    buttonContainer.innerHTML += categoryButtons;
+}
