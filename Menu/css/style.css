@@ -15,21 +15,25 @@ body{
     color: #000;
     font-family: 'Poppins', sans-serif;
     background-color: #f9f9fb;
+    
 }
-
+.button-container{
+    margin:2rem;
+}
 main{
-    display: grid;
-    grid-template-columns: 1000px;
-    grid-template-rows: 360px 220px;
+    display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+    width: 60%;
+    margin: 0 auto;
 }
 
 main header{
     display: flex;
     flex-direction: column;
     align-content: center;
-    gap: 3.2rem;
+    gap:2rem;
 }
 
 
@@ -39,14 +43,13 @@ main header .title h2{
 }
 
 main header header h2::after{
-    content: "";
-
+    content: "a";
     display: block;
     width: 11rem;
     height: 0.3rem;
     margin: 0 auto;
-
     background-color: #c59d5f;
+
 }
 
 main header .button-container{
@@ -102,8 +105,24 @@ main section .menu-items .item-info .item-description p {
 }
 
 main section .menu-items{ 
-    display: flex;
-    gap: 1.6rem;
-    max-width: 64rem;
+    
+    display: grid;
+    grid-gap: 2rem;
+    grid-template-columns: 1fr 1fr ;
+    justify-content: center;
+    align-items: center;
 }
 
+
+
+@media screen and (max-width:1050px){
+    main{
+        grid-template-columns: 90%;
+    }
+
+    .menu-items{
+        margin: 0 auto ;
+    }
+
+
+}
